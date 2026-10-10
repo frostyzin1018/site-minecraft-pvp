@@ -1,329 +1,645 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PvP no Minecraft Java - Guia Básico</title>
-    <!-- Vincula o arquivo de estilos modernizado -->
+
+    <meta name="theme-color" content="#101510">
+    <meta name="description" content="Guia básico de PvP no Minecraft Java Edition: combate, movimentação, combos, equipamentos e treinamento.">
+
+    <title>Minecraft PvP | Guia do Combatente</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- CABEÇALHO -->
-    <header class="cabecalho">
-        <h1>⚔ PvP no Minecraft Java</h1>
-        <p class="subtitulo">Um guia básico de Player vs Player para PC — Trabalho Escolar</p>
+    <header class="cabecalho" id="inicio">
+        <div class="cabecalho-conteudo">
+            <span class="etiqueta">
+                <span class="status-ponto"></span>
+                GUIA PARA INICIANTES
+            </span>
+
+            <h1><span class="titulo-icone">⚔</span> MINECRAFT <span class="destaque">PvP</span></h1>
+
+            <p class="subtitulo">
+                Domine o combate. Controle o campo. Evolua a cada batalha.
+            </p>
+
+            <div class="cabecalho-botoes">
+                <a href="#combate" class="botao botao-principal">
+                    Começar a aprender <span aria-hidden="true">→</span>
+                </a>
+                <a href="#equipamentos" class="botao botao-secundario">
+                    Ver equipamentos
+                </a>
+            </div>
+
+            <div class="cabecalho-info">
+                <span>🎮 Minecraft Java Edition</span>
+                <span>⌨️ PC</span>
+                <span>📚 Projeto escolar</span>
+            </div>
+        </div>
+
+        <div class="bloco-decorativo bloco-um" aria-hidden="true"></div>
+        <div class="bloco-decorativo bloco-dois" aria-hidden="true"></div>
+        <div class="bloco-decorativo bloco-tres" aria-hidden="true"></div>
     </header>
 
-    <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#combate">Combate</a>
-        <a href="#movimento">Movimento</a>
-        <a href="#combos">Combos</a>
-        <a href="#equipamentos">Equipamentos</a>
-        <a href="#treino">Treino</a>
+    <!-- MENU -->
+    <nav class="menu" aria-label="Navegação principal">
+        <a class="logo-menu" href="#inicio">
+            <span>▣</span> PvP<span class="destaque">.GG</span>
+        </a>
+
+        <div class="menu-links">
+            <a href="#inicio">Início</a>
+            <a href="#combate">Combate</a>
+            <a href="#movimento">Movimento</a>
+            <a href="#combos">Combos</a>
+            <a href="#equipamentos">Equipamentos</a>
+            <a href="#treino">Treinamento</a>
+        </div>
     </nav>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-        
-        <!-- SEÇÃO: INÍCIO -->
-        <section id="inicio" class="secao">
-            <h2>Bem-vindo!</h2>
-            <div class="card">
-                <p>Este site é um trabalho escolar sobre PvP no <strong>Minecraft Java Edition</strong> para PC. Aqui serão explicados conceitos básicos de combate, movimentação, combos, equipamentos e algumas técnicas usadas pelos jogadores.</p>
-                
-                <h3>🎮 O que é PvP?</h3>
-                <p>PvP significa <strong>Player versus Player</strong> (Jogador contra Jogador). No Minecraft, trata-se do combate direto entre jogadores utilizando armas, itens utilitários, movimentação estratégica e agilidade mental.</p>
-                <p>Para quem está começando, o PvP moderno pode parecer difícil porque exige atenção simultânea em vários fundamentos: controle de mira, tempo de recarga dos ataques, distância e os movimentos de esquiva do adversário.</p>
+    <main class="container">
+
+        <!-- INTRODUÇÃO -->
+        <section class="secao introducao" id="sobre">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">01 / INTRODUÇÃO</span>
+                <h2>ENTENDA O <span class="destaque">PvP</span></h2>
+                <p>Conhecimento e estratégia são tão importantes quanto a velocidade.</p>
+            </div>
+
+            <div class="grid-introducao">
+                <article class="painel painel-intro">
+                    <div class="icone-grande">🎮</div>
+                    <h3>O que é PvP?</h3>
+                    <p>
+                        PvP significa <strong>Player versus Player</strong>, ou
+                        jogador contra jogador. No Minecraft, é o combate entre
+                        jogadores utilizando armas, equipamentos, movimentação e estratégia.
+                    </p>
+                    <p>
+                        Para jogar bem, você precisa combinar mira, distância,
+                        tempo dos ataques e leitura dos movimentos do adversário.
+                    </p>
+                </article>
+
+                <article class="painel painel-estatisticas">
+                    <div class="mini-titulo">FUNDAMENTOS DO COMBATE</div>
+
+                    <div class="fundamento">
+                        <span class="fundamento-icone">🎯</span>
+                        <div>
+                            <h3>Mira</h3>
+                            <p>Mantenha o adversário no centro da sua visão.</p>
+                        </div>
+                    </div>
+
+                    <div class="fundamento">
+                        <span class="fundamento-icone">🏃</span>
+                        <div>
+                            <h3>Movimentação</h3>
+                            <p>Esquive e controle sua posição durante a luta.</p>
+                        </div>
+                    </div>
+
+                    <div class="fundamento">
+                        <span class="fundamento-icone">⏱️</span>
+                        <div>
+                            <h3>Tempo dos ataques</h3>
+                            <p>Aprenda o ritmo de cada arma.</p>
+                        </div>
+                    </div>
+
+                    <div class="fundamento">
+                        <span class="fundamento-icone">🛡️</span>
+                        <div>
+                            <h3>Estratégia</h3>
+                            <p>Saiba quando atacar, defender ou recuar.</p>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- SEÇÃO: COMBATE -->
-        <section id="combate" class="secao">
-            <h2>⚔ Fundamentos do Combate</h2>
-            <div class="card">
-                <h3>⚔ Ataques e Recarga (Cooldown)</h3>
-                <p>No Minecraft Java, os ataques possuem um <strong>tempo de recarga</strong> representado por uma barra abaixo da mira. Atacar no momento exato em que a barra está cheia garante o dano máximo da arma. Clicar repetidamente de forma desesperada reduz drasticamente a eficácia dos seus golpes.</p>
-                
-                <h3>📐 Alcance e Distância (Reach)</h3>
-                <p>O alcance padrão de ataque no modo de sobrevivência é de 3 blocos. Controlar o espaço entre você e o adversário permite desferir golpes sem entrar no raio de alcance dele.</p>
+        <!-- COMBATE -->
+        <section class="secao" id="combate">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">02 / FUNDAMENTOS</span>
+                <h2>DOMINE O <span class="destaque">COMBATE</span></h2>
+                <p>Aprenda os conceitos essenciais antes de tentar técnicas avançadas.</p>
+            </div>
 
-                <h3>↔ Knockback (Repulsão)</h3>
-                <p>Knockback é o empurrão que o jogador sofre ao receber um dano. Saber como induzir e reduzir o knockback é a chave para ditar o ritmo da luta.</p>
+            <div class="grid-tres">
+                <article class="painel cartao-info">
+                    <span class="icone-card">⚔️</span>
+                    <span class="tag">01 — ATAQUE</span>
+                    <h3>Tempo de recarga</h3>
+                    <p>
+                        No combate moderno do Minecraft Java, os ataques têm
+                        um tempo de recarga. Observe o indicador de ataque e
+                        aprenda o momento adequado para golpear.
+                    </p>
+                </article>
 
-                <h3>⭐ Ataques Críticos</h3>
-                <p>Um ataque crítico causa dano extra e partículas saltam do alvo. Ele ocorre quando você atinge o oponente <strong>no momento em que está caindo de um pulo</strong>. No entanto, pular sem parar te torna um alvo fácil no ar, então use com sabedoria.</p>
-                
+                <article class="painel cartao-info">
+                    <span class="icone-card">📐</span>
+                    <span class="tag">02 — DISTÂNCIA</span>
+                    <h3>Alcance dos golpes</h3>
+                    <p>
+                        O alcance padrão de ataque corpo a corpo no modo
+                        de sobrevivência é de aproximadamente 3 blocos.
+                        Controlar a distância ajuda a acertar primeiro.
+                    </p>
+                </article>
+
+                <article class="painel cartao-info">
+                    <span class="icone-card">💥</span>
+                    <span class="tag">03 — REPULSÃO</span>
+                    <h3>Knockback</h3>
+                    <p>
+                        É o empurrão provocado por um golpe. Entender como
+                        ele afeta o posicionamento ajuda a manter a pressão
+                        e a evitar ataques consecutivos do adversário.
+                    </p>
+                </article>
+            </div>
+
+            <article class="painel destaque-painel">
+                <div class="destaque-texto">
+                    <span class="tag">TÉCNICA DE COMBATE</span>
+                    <h3>⭐ Ataques críticos</h3>
+                    <p>
+                        Um ataque crítico com uma arma corpo a corpo pode
+                        causar dano adicional. Para executá-lo, acerte o
+                        adversário durante a descida de um salto, desde que
+                        as demais condições do jogo sejam atendidas.
+                    </p>
+                </div>
+
                 <div class="diagrama">
-                    🧍 (Salto) ➜ ⬇ (Queda) + ⚔ = 💥 ATAQUE CRÍTICO!
+                    <div class="etapa-diagrama">
+                        <span>🧍</span>
+                        <small>SALTAR</small>
+                    </div>
+                    <span class="seta">→</span>
+                    <div class="etapa-diagrama">
+                        <span>⬇️</span>
+                        <small>DESCER</small>
+                    </div>
+                    <span class="seta">→</span>
+                    <div class="etapa-diagrama">
+                        <span>⚔️</span>
+                        <small>ATACAR</small>
+                    </div>
+                    <span class="seta">→</span>
+                    <div class="etapa-diagrama resultado">
+                        <span>💥</span>
+                        <small>CRÍTICO!</small>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- MOVIMENTAÇÃO -->
+        <section class="secao" id="movimento">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">03 / MOVIMENTAÇÃO</span>
+                <h2>CONTROLE O <span class="destaque">MOVIMENTO</span></h2>
+                <p>Movimentar-se bem pode dificultar os ataques do seu oponente.</p>
+            </div>
+
+            <div class="grid-movimento">
+                <article class="painel painel-teclado">
+                    <span class="tag">CONTROLES DO PC</span>
+                    <h3>Teclas de movimento</h3>
+                    <p>Aprenda a combinar as teclas para mudar sua posição rapidamente.</p>
+
+                    <div class="teclado" aria-label="Representação das teclas W A S D">
+                        <div class="linha-teclas">
+                            <kbd>W</kbd>
+                        </div>
+                        <div class="linha-teclas">
+                            <kbd>A</kbd>
+                            <kbd>S</kbd>
+                            <kbd>D</kbd>
+                        </div>
+                    </div>
+
+                    <div class="legenda-teclado">
+                        <span><kbd>W</kbd> Frente</span>
+                        <span><kbd>A</kbd> Esquerda</span>
+                        <span><kbd>S</kbd> Trás</span>
+                        <span><kbd>D</kbd> Direita</span>
+                    </div>
+                </article>
+
+                <div class="coluna-movimento">
+                    <article class="painel movimento-item">
+                        <span class="icone-card">↔️</span>
+                        <div>
+                            <h3>Strafing</h3>
+                            <p>
+                                Alterne entre esquerda e direita enquanto
+                                mantém a mira no adversário. Isso torna seus
+                                movimentos menos previsíveis.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="painel movimento-item">
+                        <span class="icone-card">⌨️</span>
+                        <div>
+                            <h3>W-Tap</h3>
+                            <p>
+                                Solte brevemente a tecla W depois de atingir
+                                o adversário e pressione-a novamente para
+                                reiniciar a corrida. A técnica pode ajudar a
+                                controlar o knockback em versões e modos compatíveis.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="painel sequencia">
+                <span class="tag">COMO PRATICAR O W-TAP</span>
+                <div class="sequencia-itens">
+                    <span>1. Avance com W</span>
+                    <span class="seta">→</span>
+                    <span>2. Acerte o golpe</span>
+                    <span class="seta">→</span>
+                    <span>3. Solte W</span>
+                    <span class="seta">→</span>
+                    <span>4. Pressione W novamente</span>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: MOVIMENTAÇÃO -->
-        <section id="movimento" class="secao">
-            <h2>🏃 Movimentação e W-Tap</h2>
-            <div class="card">
-                <p>A movimentação é o pilar mais importante para evitar danos. No computador, o controle é feito pelas teclas clássicas:</p>
-                
-                <div class="teclas">
-                    <span class="tecla">W</span><br>
-                    <span class="tecla">A</span> <span class="tecla">S</span> <span class="tecla">D</span>
+        <!-- COMBOS E CPS -->
+        <section class="secao" id="combos">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">04 / TÉCNICAS</span>
+                <h2>COMBOS E <span class="destaque">CPS</span></h2>
+                <p>Precisão e consistência fazem diferença durante o combate.</p>
+            </div>
+
+            <div class="grid-combos">
+                <article class="painel painel-combo">
+                    <span class="icone-card">🔥</span>
+                    <h3>Como funcionam os combos?</h3>
+                    <p>
+                        Um combo acontece quando você acerta golpes consecutivos
+                        e aproveita o knockback para dificultar a reação do
+                        adversário. Mira, distância e movimentação precisam
+                        trabalhar juntas.
+                    </p>
+
+                    <div class="formula">
+                        <span>🎯 Mira</span>
+                        <b>+</b>
+                        <span>🏃 Movimento</span>
+                        <b>+</b>
+                        <span>📐 Distância</span>
+                        <b>=</b>
+                        <span class="formula-final">🔥 COMBO</span>
+                    </div>
+                </article>
+
+                <article class="painel painel-cps">
+                    <span class="tag">CLICKS PER SECOND</span>
+                    <div class="cps-numero">CPS<span> /s</span></div>
+                    <h3>Cliques por segundo</h3>
+                    <p>
+                        CPS indica quantos cliques você realiza em um segundo.
+                        Um valor alto, sozinho, não garante bons resultados:
+                        mira, tempo dos ataques e precisão também importam.
+                    </p>
+
+                    <div class="barra-cps">
+                        <span>Precisão</span>
+                        <span class="barra-fundo"><span class="barra-progresso"></span></span>
+                    </div>
+                    <p class="observacao">Priorize acertar os golpes antes de aumentar a velocidade.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- EQUIPAMENTOS -->
+        <section class="secao" id="equipamentos">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">05 / EQUIPAMENTOS</span>
+                <h2>ESCOLHA SEU <span class="destaque">ARSENAL</span></h2>
+                <p>Cada equipamento tem vantagens e situações em que pode ser útil.</p>
+            </div>
+
+            <div class="grid-equipamentos">
+                <article class="painel equipamento">
+                    <div class="equipamento-icone">⚔️</div>
+                    <span class="tag">CORPO A CORPO</span>
+                    <h3>Espada</h3>
+                    <p>
+                        Uma arma versátil para o combate próximo. Sua
+                        velocidade de ataque costuma ser maior que a do machado.
+                    </p>
+                    <span class="equipamento-tipo">ATAQUES FREQUENTES</span>
+                </article>
+
+                <article class="painel equipamento">
+                    <div class="equipamento-icone">🪓</div>
+                    <span class="tag">CORPO A CORPO</span>
+                    <h3>Machado</h3>
+                    <p>
+                        Geralmente causa mais dano por golpe, mas possui
+                        recarga mais lenta. Também pode desativar escudos
+                        temporariamente em condições aplicáveis.
+                    </p>
+                    <span class="equipamento-tipo">GOLPES FORTES</span>
+                </article>
+
+                <article class="painel equipamento">
+                    <div class="equipamento-icone">🛡️</div>
+                    <span class="tag">DEFESA</span>
+                    <h3>Escudo</h3>
+                    <p>
+                        Ajuda a bloquear ataques frontais e determinados
+                        projéteis. Saber a hora de defender e contra-atacar
+                        é essencial.
+                    </p>
+                    <span class="equipamento-tipo">PROTEÇÃO</span>
+                </article>
+
+                <article class="painel equipamento">
+                    <div class="equipamento-icone">🏹</div>
+                    <span class="tag">DISTÂNCIA</span>
+                    <h3>Arco e besta</h3>
+                    <p>
+                        Permitem atacar à distância. Calcular a trajetória
+                        e antecipar os movimentos do oponente melhora a precisão.
+                    </p>
+                    <span class="equipamento-tipo">ATAQUES À DISTÂNCIA</span>
+                </article>
+            </div>
+
+            <div class="painel tabela-painel">
+                <div class="tabela-cabecalho">
+                    <div>
+                        <span class="tag">COMPARATIVO</span>
+                        <h3>Qual equipamento escolher?</h3>
+                    </div>
+                    <span class="tabela-icone">▤</span>
                 </div>
 
-                <h3>↔ Strafing</h3>
-                <p>Consiste em mover-se rapidamente para os lados (alternando entre as teclas <strong>A</strong> e <strong>D</strong>) enquanto mantém a mira no adversário. Isso dificulta que o oponente consiga rastrear seus movimentos.</p>
-
-                <h3>⌨ Técnica do W-Tap</h3>
-                <p>É uma técnica avançada de reset de corrida. Ao desferir um golpe, você solta rapidamente a tecla <strong>W</strong> e a pressiona de novo. Isso faz com que seu próximo ataque aplique o knockback máximo no oponente, iniciando uma sequência de combos.</p>
-                
-                <div class="diagrama">
-                    Apertar W ➜ Bater no Alvo ➜ Soltar W rapidamente ➜ Apertar W de novo
+                <div class="tabela-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Equipamento</th>
+                                <th>Principal função</th>
+                                <th>Ponto forte</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>⚔️ Espada</td>
+                                <td>Combate próximo</td>
+                                <td>Boa velocidade de ataque</td>
+                            </tr>
+                            <tr>
+                                <td>🪓 Machado</td>
+                                <td>Combate próximo</td>
+                                <td>Maior dano por golpe</td>
+                            </tr>
+                            <tr>
+                                <td>🛡️ Escudo</td>
+                                <td>Defesa</td>
+                                <td>Bloqueio de ataques</td>
+                            </tr>
+                            <tr>
+                                <td>🏹 Arco e besta</td>
+                                <td>Combate à distância</td>
+                                <td>Pressão de longe</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO: COMBOS -->
-        <section id="combos" class="secao">
-            <h2>🔥 Como Funcionam os Combos</h2>
-            <div class="card">
-                <p>Um <strong>combo</strong> acontece quando você consegue acertar vários golpes seguidos no adversário sem dar a ele a chance de revidar. Para conseguir isso, você deve combinar perfeitamente sua mira com o controle de repulsão.</p>
-                <div class="diagrama">
-                    🎯 Mira Precisa + 🏃 Movimento Constante + 📐 Controle de Distância = 🔥 COMBO PERFECT
-                </div>
-                <h3>🖱 CPS (Cliques por Segundo)</h3>
-                <p>Embora ter um CPS alto ajude no registro de golpes, ele não substitui uma boa mira. Um jogador com 6 CPS que acerta todos os golpes sempre vencerá um jogador com 15 CPS que clica rápido, mas erra o alvo.</p>
+        <!-- TREINAMENTO -->
+        <section class="secao" id="treino">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">06 / EVOLUÇÃO</span>
+                <h2>SUBA DE <span class="destaque">NÍVEL</span></h2>
+                <p>Crie uma rotina de treino e evolua um fundamento de cada vez.</p>
+            </div>
+
+            <div class="grid-treino">
+                <article class="painel painel-treino">
+                    <span class="tag">ROTINA DE PRÁTICA</span>
+                    <h3>Seu plano de treinamento</h3>
+                    <p>Use esta lista para acompanhar os fundamentos que já praticou.</p>
+
+                    <div class="lista-interativa">
+                        <label class="item-treino">
+                            <input type="checkbox">
+                            <span class="check-personalizado"></span>
+                            <span>Treinar a mira no adversário</span>
+                        </label>
+
+                        <label class="item-treino">
+                            <input type="checkbox">
+                            <span class="check-personalizado"></span>
+                            <span>Praticar movimentação e strafing</span>
+                        </label>
+
+                        <label class="item-treino">
+                            <input type="checkbox">
+                            <span class="check-personalizado"></span>
+                            <span>Aprender o tempo dos ataques</span>
+                        </label>
+
+                        <label class="item-treino">
+                            <input type="checkbox">
+                            <span class="check-personalizado"></span>
+                            <span>Experimentar o W-Tap</span>
+                        </label>
+
+                        <label class="item-treino">
+                            <input type="checkbox">
+                            <span class="check-personalizado"></span>
+                            <span>Praticar combos e distância</span>
+                        </label>
+
+                        <label class="item-treino">
+                            <input type="checkbox">
+                            <span class="check-personalizado"></span>
+                            <span>Rever os erros depois de uma luta</span>
+                        </label>
+                    </div>
+
+                    <p class="observacao">
+                        Dica: marque cada etapa conforme você for praticando.
+                    </p>
+                </article>
+
+                <article class="painel painel-erros">
+                    <span class="tag tag-vermelha">FIQUE ATENTO</span>
+                    <h3>Erros comuns</h3>
+
+                    <div class="erro-item">
+                        <span>✕</span>
+                        <p>Ficar parado ou correr apenas em linha reta.</p>
+                    </div>
+
+                    <div class="erro-item">
+                        <span>✕</span>
+                        <p>Clicar sem considerar o tempo de recarga.</p>
+                    </div>
+
+                    <div class="erro-item">
+                        <span>✕</span>
+                        <p>Pular repetidamente sem uma estratégia.</p>
+                    </div>
+
+                    <div class="erro-item">
+                        <span>✕</span>
+                        <p>Ignorar a distância e a mira.</p>
+                    </div>
+
+                    <div class="erro-item">
+                        <span>✕</span>
+                        <p>Tentar técnicas avançadas sem dominar o básico.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- SEÇÃO: EQUIPAMENTOS -->
-        <section id="equipamentos" class="secao">
-            <h2>🛡 Armas e Equipamentos</h2>
-            <div class="card">
-                <p>Conheça as características das principais ferramentas de combate do jogo:</p>
-                
-                <div class="grid-equipamentos">
-                    <div class="card-equipamento">
-                        <h3>⚔ Espada</h3>
-                        <p>A arma mais equilibrada. Possui alta velocidade de ataque, tempo de recarga rápido e é ideal para manter combos em combates de curta distância.</p>
-                    </div>
-                    <div class="card-equipamento">
-                        <h3>🪓 Machado</h3>
-                        <p>Causa muito dano por golpe único e desativa escudos temporariamente. Em contrapartida, seu tempo de recarga é consideravelmente lento.</p>
-                    </div>
-                    <div class="card-equipamento">
-                        <h3>🛡 Escudo</h3>
-                        <p>Bloqueia 100% dos danos de ataques frontais e projéteis. Essencial para se defender de investidas perigosas, mas te deixa mais lento ao usar.</p>
-                    </div>
-                    <div class="card-equipamento">
-                        <h3>🏹 Arco e Besta</h3>
-                        <p>Permitem atacar à distância para enfraquecer o oponente antes do corpo a corpo ou impedir que ele fuja para se regenerar.</p>
-                    </div>
-                </div>
+        <!-- VÍDEOS -->
+        <section class="secao" id="videos">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">07 / REFERÊNCIAS</span>
+                <h2>APRENDA COM <span class="destaque">VÍDEOS</span></h2>
+                <p>Confira os vídeos de referência para complementar seus estudos.</p>
             </div>
+
+            <div class="grid-videos">
+                <article class="painel card-video">
+                    <div class="video-icone">▶</div>
+                    <span class="tag">REFERÊNCIA 01</span>
+                    <h3>Vídeo de PvP #1</h3>
+                    <p>Observe as técnicas utilizadas durante o combate.</p>
+                    <a class="botao botao-video"
+                       href="https://vt.tiktok.com/ZSbppU3rQ/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Assistir vídeo ↗
+                    </a>
+                </article>
+
+                <article class="painel card-video">
+                    <div class="video-icone">▶</div>
+                    <span class="tag">REFERÊNCIA 02</span>
+                    <h3>Vídeo de PvP #2</h3>
+                    <p>Preste atenção na movimentação e no posicionamento.</p>
+                    <a class="botao botao-video"
+                       href="https://vt.tiktok.com/ZSbppMfQe/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Assistir vídeo ↗
+                    </a>
+                </article>
+
+                <article class="painel card-video">
+                    <div class="video-icone">▶</div>
+                    <span class="tag">REFERÊNCIA 03</span>
+                    <h3>Vídeo de PvP #3</h3>
+                    <p>Analise como o jogador reage aos ataques adversários.</p>
+                    <a class="botao botao-video"
+                       href="https://vt.tiktok.com/ZSbtFwwBn/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Assistir vídeo ↗
+                    </a>
+                </article>
+            </div>
+
+            <p class="observacao aviso-videos">
+                Os links abrem os vídeos no TikTok. A disponibilidade depende da plataforma.
+            </p>
         </section>
 
-        <!-- SEÇÃO: GUIA DE TREINO -->
-        <section id="treino" class="secao">
-            <h2>🥊 Rotina de Treino e Erros Comuns</h2>
-            <div class="card">
-                <h3>📈 Passos para Melhorar</h3>
-                <ul class="lista-treino">
-                    <li>Pratique manter o cursor fixo no oponente enquanto se move em círculos.</li>
-                    <li>Acostume-se com o ritmo visual da barra de recarga das armas.</li>
-                    <li>Treine o tempo do W-Tap contra criaturas antes de ir para servidores PvP.</li>
-                    <li>Analise as suas derrotas para entender onde sua guarda falhou.</li>
-                </ul>
-
-                <h3>❌ Principais Erros dos Iniciantes</h3>
-                <ul class="lista-erros">
-                    <li>Ficar parado ou andar apenas em linha reta em direção ao inimigo.</li>
-                    <li>Clicar o mais rápido possível ignorando o tempo de recarga.</li>
-                    <li>Pular excessivamente sem critério, ficando vulnerável no ar.</li>
-                    <li>Esquecer-se de usar o escudo ou ferramentas utilitárias na batalha.</li>
-                </ul>
+        <!-- DICAS -->
+        <section class="secao" id="dicas">
+            <div class="cabecalho-secao">
+                <span class="numero-secao">08 / DICAS FINAIS</span>
+                <h2>LEMBRE-SE DISSO, <span class="destaque">JOGADOR</span></h2>
             </div>
 
-            <!-- DICAS RÁPIDAS (GRID) -->
             <div class="grid-dicas">
-                <div class="dica">🎯 Mire primeiro, clique depois.</div>
-                <div class="dica">🏃 Movimento constante salva vidas.</div>
-                <div class="dica">⏱ Respeite o tempo da recarga.</div>
-                <div class="dica">🛡 O escudo é seu melhor amigo.</div>
-            </div>
+                <article class="dica">
+                    <span>🎯</span>
+                    <p>Mire primeiro, clique depois.</p>
+                </article>
 
-            <p class="frase-final">A prática leva à perfeição. Boa sorte no treino!</p>
+                <article class="dica">
+                    <span>🏃</span>
+                    <p>Mantenha-se em movimento.</p>
+                </article>
+
+                <article class="dica">
+                    <span>⏱️</span>
+                    <p>Respeite o tempo de recarga.</p>
+                </article>
+
+                <article class="dica">
+                    <span>🛡️</span>
+                    <p>Use os equipamentos com estratégia.</p>
+                </article>
+
+                <article class="dica">
+                    <span>🔥</span>
+                    <p>Treine com consistência.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONCLUSÃO -->
+        <section class="secao" id="conclusao">
+            <div class="painel conclusao">
+                <span class="conclusao-icone">🏆</span>
+                <span class="tag">MISSÃO: EVOLUIR</span>
+                <h2>TODO BOM JOGADOR <span class="destaque">COMEÇA DO ZERO.</span></h2>
+                <p>
+                    PvP não é apenas clicar rápido. Um bom jogador desenvolve
+                    a mira, a movimentação, o controle da distância, o tempo
+                    dos ataques e o uso dos equipamentos. Com prática e
+                    atenção aos próprios erros, você pode melhorar a cada batalha.
+                </p>
+                <a href="#inicio" class="botao botao-principal">
+                    Voltar ao início ↑
+                </a>
+            </div>
         </section>
 
     </main>
 
     <!-- RODAPÉ -->
     <footer class="rodape">
-        <p>Projeto Escolar - Desenvolvimento Web com HTML5 e CSS3</p>
-        <p>Inspirado na comunidade competitiva de Minecraft Java Edition.</p>
-    </footer>
+        <a href="#inicio" class="logo-menu">
+            ▣ PvP<span class="destaque">.GG</span>
+        </a>
 
-</body>
-</html>
-<ards">
-                <article class="card equipamento">
-                    <h3>⚔️ Espada</h3>
-                    <p>
-                        É uma das principais armas para combate próximo. É simples de usar
-                        e muito importante para aprender os fundamentos do PvP.
-                    </p>
-                </article>
+        <p>Projeto escolar — Desenvolvimento Web com HTML5 e CSS3.</p>
+        <p>Conteúdo educativo inspirado no combate do Minecraft Java Edition.</p>
 
-                <article class="card equipamento">
-                    <h3>🪓 Machado</h3>
-                    <p>
-                        O machado pode causar golpes fortes e também possui outras
-                        utilidades fora do combate. No Java, seus ataques têm uma
-                        recarga diferente da espada.
-                    </p>
-                </article>
-
-                <article class="card equipamento">
-                    <h3>🛡️ Escudo</h3>
-                    <p>
-                        O escudo pode bloquear ataques e ajudar na defesa. Saber quando
-                        levantar e quando atacar é importante.
-                    </p>
-                </article>
-
-                <article class="card equipamento">
-                    <h3>🏹 Arco</h3>
-                    <p>
-                        O arco permite atacar de longe. A mira e a previsão do movimento
-                        do adversário são importantes para acertar as flechas.
-                    </p>
-                </article>
-            </div>
-
-            <h3 class="subtitulo">Comparação simples</h3>
-            <table>
-                <tr>
-                    <th>Arma</th>
-                    <th>Característica</th>
-                    <th>Utilidade</th>
-                </tr>
-                <tr>
-                    <td>⚔️ Espada</td>
-                    <td>Combate próximo</td>
-                    <td>Boa para ataques frequentes</td>
-                </tr>
-                <tr>
-                    <td>🪓 Machado</td>
-                    <td>Golpes fortes</td>
-                    <td>Combate próximo</td>
-                </tr>
-                <tr>
-                    <td>🏹 Arco</td>
-                    <td>Combate à distância</td>
-                    <td>Atacar de longe</td>
-                </tr>
-                <tr>
-                    <td>🛡️ Escudo</td>
-                    <td>Defesa</td>
-                    <td>Bloquear ataques</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="cps">
-            <h2>🖱️ CPS</h2>
-            <p>
-                CPS significa <strong>Clicks Per Second</strong>, ou cliques por segundo.
-                É uma forma de medir quantos cliques um jogador consegue fazer em um segundo.
-            </p>
-            <p>
-                Ter CPS alto pode parecer importante, mas CPS não é tudo no PvP. Mira,
-                movimentação, tempo dos ataques e estratégia também são muito importantes.
-            </p>
-
-            <div class="dica">
-                💡 <strong>Não pense apenas em clicar rápido.</strong>
-                Primeiro tente acertar os golpes.
-            </div>
-        </section>
-
-        <section id="treinamento">
-            <h2>🥊 Como treinar PvP?</h2>
-            <ol class="treino">
-                <li>Treine sua mira.</li>
-                <li>Treine sua movimentação.</li>
-                <li>Pratique strafing.</li>
-                <li>Treine W-tap aos poucos.</li>
-                <li>Pratique combos.</li>
-                <li>Aprenda a usar os equipamentos.</li>
-                <li>Jogue contra outros jogadores.</li>
-                <li>Observe seus próprios erros.</li>
-            </ol>
-            <p>
-                É normal perder enquanto está aprendendo. O importante é perceber o que
-                aconteceu na luta e tentar melhorar na próxima.
-            </p>
-        </section>
-
-        <section id="erros">
-            <h2>❌ Erros de iniciantes</h2>
-            <ul class="erros">
-                <li>Ficar parado durante a luta.</li>
-                <li>Apenas clicar rapidamente.</li>
-                <li>Não prestar atenção na mira.</li>
-                <li>Pular demais.</li>
-                <li>Não controlar a distância.</li>
-                <li>Não saber usar o escudo.</li>
-                <li>Tentar técnicas avançadas antes de aprender o básico.</li>
-            </ul>
-        </section>
-
-        <section id="dicas">
-            <h2>💡 Dicas rápidas</h2>
-
-            <div class="cards">
-                <article class="card dica-card">🎯 Mire primeiro, clique depois.</article>
-                <article class="card dica-card">🏃 Não fique parado.</article>
-                <article class="card dica-card">⚔️ Aprenda o tempo dos ataques.</article>
-                <article class="card dica-card">🛡️ Saiba quando usar o escudo.</article>
-                <article class="card dica-card">🔥 Treine antes de tentar técnicas avançadas.</article>
-            </div>
-        </section>
-
-        <section id="videos">
-            <h2>🎬 Vídeos de referência</h2>
-            <div class="videos">
-                <a class="botao" href="https://vt.tiktok.com/ZSbppU3rQ/" target="_blank">
-                    ▶️ Vídeo 1
-                </a>
-                <a class="botao" href="https://vt.tiktok.com/ZSbppMfQe/" target="_blank">
-                    ▶️ Vídeo 2
-                </a>
-                 <a class="botao" href="https://vt.tiktok.com/ZSbtFwwBn/" target="_blank">
-                    ▶️ Vídeo 3
-                </a>
-            </div>
-        </section>
-
-        <section id="conclusao">
-            <h2>🏆 Conclusão</h2>
-            <p>
-                PvP não é apenas clicar rápido. Um bom jogador precisa melhorar a mira,
-                o movimento, o tempo dos ataques, a distância, o controle do knockback,
-                o uso dos equipamentos e a estratégia.
-            </p>
-            <p>
-                Melhorar no PvP depende principalmente de prática. Quanto mais o jogador
-                treina e entende seus erros, mais fácil fica aprender novas técnicas.
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <p>Trabalho escolar - Minecraft Java PvP</p>
-        <p>Feito com HTML e CSS.</p>
+        <span class="rodape-final">FEITO PARA QUEM NÃO DESISTE DA PRÓXIMA LUTA. 🟩</span>
     </footer>
 
 </body>
